@@ -1,0 +1,735 @@
+// sass-lint:disable no-css-comments
+// sass-lint:disable border-zero
+// sass-lint:disable class-name-format
+// sass-lint:disable no-ids
+// // sass-lint:disable force-element-nesting
+// sass-lint:disable nesting-depth
+
+/* Theme Name:  index-Niri-Divi_child
+ Theme URI:   https://nat.indexwebmedia.com
+ Version:     1.0
+ Description: A child theme of Divi. This is a custom child theme created for our site Needs Assesment Tool.
+ Author: Lorenzo Colen
+ Author URI:  https://nat.indexwebmedia.com
+ Template:    Divi
+ - Add any CSS custom code for this child theme below this line -
+
+/*!
+ .............................--............................
+ ............................+**+...........................
+ ..........................-******-.........................
+ .........................:********:........................
+ ....................-:......:**:......+-...................
+ .........++++***:...+***+-........-*===+...+======*........
+ .........:+++***-..-*****:...**...:=====-..-======+........
+ .........-+++**+...--:++-..:****:..-*++:-...*=====-........
+ ..........::-....-......+-..-++-..-+......--...-:+.........
+ .................++**-.:*-+*-..-*+-+-.:====................
+ ........--:+++-..:+*+..**+*-.++.-*+++..*==*..:===*:-.......
+ .........+++++:........-.....::.....--.......*=====........
+ ..........:+++..*=*+=-.++..........==.-+::+:.-*==*.........
+ ....-++-.........+*:=:................-+-::.....-...:=*-...
+ ..:+++++:....:++-.-..-................:..-.-==*....+=====*-
+ -++++++++-.-+++++...:+:..............+=*...*====:.-========
+ ...-++++......-:..==-..................-++..+:......====:..
+ ......-...-+:...-=-.*:.-............-.-:..+-...+=-...:.....
+ .........-+++++..-:+*.-+*-........-==-.+:--..*====:........
+ ........:+++++:..---....-::.:**:.::-....-::..+=====+.......
+ ............---..++**-.+:.:*....*-.::.-===*..-:-...........
+ ................-++++-.-=*+......:**-.:**==-...............
+ ..........+++++-...........:****:...........-*====.........
+ .........-+++**+...-****+...+**+...*====:...======:........
+ .........:+++***:...+*****...--...*====*...:======*........
+ .........++::--.....:**-.....--.....:*=:.....-:+**=........
+ ..........................-******-.........................
+ ..........................********.........................
+ ...........................:****:..........................
+ .............................**............................
+
+/* -   
+/* h1, h2, h3, h4, h5, h6 {
+ font-family: Helvetica, Arial, sans-serif !important; }
+
+@charset 'utf-8'
+
+@import 'colors'
+
+/*
+ =================
+
+/* 
+ BASICS
+ */
+
+p
+  a
+    &:link
+      border: dotted 2px $trans
+      padding: 0 6px
+      text-decoration: underline dotted 2px $d-teal
+      transition: all 200ms ease-in-out 0s
+
+    &:hover
+      border: dotted 2px $d-teal
+      border-radius: 10px
+      text-decoration: none dotted 2px $d-teal
+      transition: all 200ms ease-in-out 0s
+
+    &:focus
+      border: solid 2px transparentize($b-azur, .3)
+      border-radius: 10px
+      box-shadow: 0 0 5px transparentize($black, .3) inset, 0 0 7px 0 transparentize($b-azur, .7)
+      text-decoration: none dotted 2px $d-teal
+      transition: all 200ms ease-in-out 0s
+
+#footer-info
+  a
+    &:link
+      border: none
+      text-decoration: none
+
+    &:hover
+      border: none
+      color: $b-azur
+      opacity: 1 !important
+
+// a
+//   &:hover
+//     text-decoration: underline dotted 2px $d-teal !important
+//     cursor: pointer
+
+//   &:focus
+//     text-decoration: underline dotted 2px $d-teal !important
+
+
+
+.x-fa
+  margin-left: 1vw
+
+/*============================
+ .
+ UL lists and LI markers
+ .
+ ===========================
+
+.et_pb_section
+  ul
+    padding: 1.6vw 0 1.1vw 2vw
+
+    ul
+      padding-left: 2.6vw
+
+      li
+        &::before
+          content: '\f105'
+          font-family: Fontawesome
+          position: relative
+
+    li
+      list-style-type: none
+
+      &::before
+        content: '\f0da'
+        font-family: Fontawesome
+        left: -.5vw
+        position: relative
+
+
+/*========================
+ TOGGLES WITH ARROWS  
+/*========================
+
+.page-id-719
+  .et_pb_toggle_title
+    font-family: 'Titillium Web', Helvetica, Arial, Lucida, sans-serif
+    font-size: 18px
+
+  .et_pb_toggle
+    .et_pb_toggle_title
+      &::after
+        content: '\f0da'
+        font-family: Fontawesome
+        left: -1vw
+        position: absolute
+        top: 0
+
+  .et_pb_section
+    .et_pb_toggle
+      ul
+        li
+          &::before
+            content: '\f105'
+
+@media (max-width: 980px)
+  .page-id-719
+    .et_pb_toggle
+      .et_pb_toggle_title
+        &::after
+          left: -3vw
+
+/* EXEPTION FOR "ITEMS OF ASSESSMENT" PAGE
+
+.et_pb_toggle
+  .et_pb_toggle_title
+    &::before
+      color: $d-teal !important
+      content: '\f067' !important
+      font-family: Fontawesome !important
+
+.home
+  .et_pb_toggle
+    .et_pb_toggle_title
+      &::before
+        color: $white !important
+
+
+/* =======================
+ .
+ ========================
+ MAIN MENU HOVER ANIM
+ ========================
+ */
+#top-menu > li > ul
+  overflow: hidden
+
+  > li
+    &::before
+      color: $l-yel-teal
+      content: '\f105'
+      font: 1em Fontawesome
+      left: 13px
+      position: absolute
+      top: 13px
+      transform: translateX(-50px)
+
+    &:hover
+      &::before
+        transform: translateX(0)
+        transition: all 500ms ease-in-out 0s
+
+/*  END - MAIN MENU HOVER ANIM
+ ==============================
+ .
+ =============
+ 
+ ╔╗ ╦ ╦╔╦╗╔╦╗╔═╗╔╗╔╔═╗ ┬┬
+ ╠╩╗║ ║ ║  ║ ║ ║║║║╚═╗ ││
+ ╚═╝╚═╝ ╩  ╩ ╚═╝╝╚╝╚═╝ oo
+  
+ =============
+ BUTTONS
+ =============
+ */
+
+.btns-menu
+  display: flex
+  flex-wrap: wrap
+
+  .et_pb_column
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    padding: 2.3% 1.3% 5%
+
+    @media only screen and (max-width: 480px)
+      padding: 15% 10%
+
+
+body
+  .et_pb_button,
+  & .et_pb_bg_layout_light .et_pb_button,
+  & .et_pb_bg_layout_light.et_pb_button
+    &:hover
+      background-color: $m-teal
+      background: linear-gradient(35deg, $g-yellow, $trans) padding-box, linear-gradient(100deg, $g-pink, $trans) padding-box, linear-gradient(245deg, $g-sky, $trans) border-box !important
+      border-color: change-color($white, $alpha: .73) !important
+      border-radius: 0
+
+.et_pb_button
+  &:hover
+    // background-color: $b-azur
+    // background: linear-gradient(transparent, transparent) content-box,linear-gradient($b-azur, $b-azur) padding-box,linear-gradient(135deg, $b-azur, $b-yellow) border-box
+    // border: 3px solid transparent !important
+    // transition: all 500ms ease-in-out !important
+    box-shadow: 0 0 10px 0 $white
+
+// .et_pb_button
+//  border: 3px solid transparent !important
+//  background: linear-gradient(transparent, transparent) content-box, linear-gradient( $btn-up, $btn-down) padding-box, linear-gradient(135deg, $b-azur, $b-yellow) border-box
+//  transition: all 500ms ease-in-out !important
+
+//   &:hover
+//     background: $l-blue
+//     background: linear-gradient(transparent, transparent) content-box, linear-gradient($btn-up, $btn-down) padding-box, linear-gradient(135deg, $b-azur, $b-yellow) border-box
+
+.et_pb_button_module_wrapper
+  .et_pb_button
+    padding: 0 5%
+
+/* END BUTTONS!!
+ ================
+ .
+ .
+ ====================
+ .
+ GLOBAL SECTIONS
+ .
+ ====================
+ .
+ .
+ ================
+ SUBSCRIPTION
+ ================
+ */
+#sub
+  .et_parallax_bg
+    animation: zoom 1s ease-in-out 2s forwards
+    transform: scale(0, 0)
+
+@keyframes zoom
+  100%
+    transform: scale(1, 1)
+
+/*   END GLOBAL SECTIONS
+ ========================
+ .
+ ===============
+ .
+ ╔╗╔╔═╗╦  ╦╦╔═╗╔═╗╔╦╗╦╔═╗╔╗╔
+ ║║║╠═╣╚╗╔╝║║ ╦╠═╣ ║ ║║ ║║║║
+ ╝╚╝╩ ╩ ╚╝ ╩╚═╝╩ ╩ ╩ ╩╚═╝╝╚╝
+ .
+ ============== */
+
+/** #et-top-navigation
+ float: left
+ padding-left: 20vw !important
+ **/
+
+#et-top-navigation
+  float: right !important
+  padding-right: 1vw !important
+
+/* ╦  ╔═╗╔═╗╔═╗  ╦ ╦┌─┐┌─┐┌┬┐┌─┐┬─┐
+/* ║  ║ ║║ ╦║ ║  ╠═╣├┤ ├─┤ ││├┤ ├┬┘
+/* ╩═╝╚═╝╚═╝╚═╝  ╩ ╩└─┘┴ ┴─┴┘└─┘┴└─
+ .
+  ==================================
+
+#main-header
+  .logo_container
+    a
+      &::after
+        color: $vd-teal
+        content: 'NiRA'
+        font-family: 'Zilla Slab', Georgia, 'Times New Roman', serif
+        font-size: 40px
+        font-weight: 500
+        height: 100px
+        margin-left: 10px
+        position: relative
+        top: 10px
+        width: 250px
+
+  #logo
+    /* width: 180px !important
+     *height: 180px */
+    animation: rotation 120s 0s linear infinite
+    z-index: -999
+
+@keyframes rotation
+  0%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(360deg)
+
+/* =======================
+ .
+ DEVIDERS CORRECTION
+ .
+ ======================= */
+
+.et_pb_top_inside_divider
+  margin-top: 0
+
+/* ============================
+ .
+ TOGGLES COLOR TRANSITION
+ .
+ ============================ */
+
+.et_pb_accordion_item
+  transition: background-color 200ms ease-in-out
+/*
+ ====================
+ 
+  ╦ ╦╔═╗╔╦╗╔═╗
+  ╠═╣║ ║║║║║╣ 
+  ╩ ╩╚═╝╩ ╩╚═╝
+
+/* ================================
+ HOME - RIGHT SIDE WELCOME SECTION
+ ==================================
+
+.et_pb_row_0
+  .et_pb_column_1
+    z-index: 8 !important
+
+.et_pb_column_0
+  &.n-welcome
+    background-position: top left
+    background-size: 120% 100%
+    overflow: scroll
+
+/*========================
+    Home - above fold
+/*========================
+
+.x-rainbow
+  background-color: $white
+  background: linear-gradient(0deg, $white 10%, $trans 30%) padding-box, linear-gradient(35deg, $g-yellow, $trans) padding-box, linear-gradient(100deg, $g-pink, $trans) padding-box, linear-gradient(245deg, $g-sky, $trans) padding-box !important
+  border-color: change-color($white, $alpha: .73) !important
+  border-radius: 0
+
+/*===========================
+ *   HOME SUBSCRIBE SECTION
+/*===========================
+
+.form
+  .et_pb_row
+    .et_pb_column
+      &:last-child
+        padding: 0
+        width: 60%
+
+      &:first-child
+        margin-right: 2%
+        width: 40%
+
+.x-col-inner
+  background-image: linear-gradient(180deg, $m-94-teal 0%, $d-97-teal 100%)
+  height: auto
+  padding: 3vw 9vw
+  width: 100%
+
+.x-text-module
+  color: $l-purple
+  padding: 1em 0
+  padding-left: 3vw
+  padding-right: 3vw
+
+  &.title
+    h2
+      color: $white
+      font-size: 2.2em
+      font-weight: 100
+      text-align: center
+
+  &.text-1
+    p
+      font-size: 1.3em
+      line-height: 1.7em !important
+
+  &.text-2
+    padding-bottom: 3vw
+
+/*   END SKEWD COLUMNS PROTOTYPE
+ ===============================
+
+@import 'toolTips'
+@import 'connections'
+
+/*   END PAGES BUTTONS SECTIONS
+ ==============================
+ .
+ ============================
+ .
+ ITEMS OF ASSESSMENT PAGE
+ .
+ ============================
+
+.page-id-719
+  .et_pb_section_2
+    &.et_pb_section
+      background: linear-gradient(35deg, $g-yellow, $trans) content-box, linear-gradient(100deg, $g-pink, $trans) padding-box, linear-gradient(145deg, $g-sky, $trans) border-box !important
+      padding: 0
+
+/*   END ITEMS OF ASSESSMENT PAGE
+ ================================
+ .
+ =========
+ QUOTES
+ =========
+
+.quotes
+  p
+    padding: 3vw 1vw
+
+    &::before,
+    &::after
+      color: $quotes
+      /*     content: open-quote;*/
+      content: '\f10d'
+      font-family: Fontawesome
+      font-size: 2em
+
+
+    &::before
+      left: -1.5vw
+      position: absolute
+      top: 80px
+      z-index: -9
+
+    &::after
+      content: '\f10e'
+      float: right
+      position: relative
+      right: 0
+      top: 0
+      z-index: -9
+
+  .et_pb_text_inner > ul
+    background-color: $quotes
+    border-left: 7px solid $l-blue
+    margin-top: 50px
+
+/*  END QUOTES
+ ============
+ */
+
+/*.
+ =======================
+ BLOOM FORM CONTACT PAGE
+ =======================
+ .
+.et_bloom
+  .et_bloom_optin_3
+    .carrot_edge
+      .et_bloom_form_content
+        &::before
+          border: 0 solid $trans !important
+
+.page
+  &.et_bloom
+    .et_bloom_optin_3
+      .et_bloom_form_container
+        .et_bloom_form_header,
+
+        &
+          background-color: $trans !important
+
+/* =================
+ CUSTOM FORM
+ =================
+ .
+.emaillist
+  form
+    background-color: $d-grey
+    border-radius: 3px
+    color: $white
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-evenly
+    padding: 1vw
+
+  input
+    &[type='text'],
+    &[type='email']
+      border-radius: 3px
+      font-size: 18px
+      padding: .5vw
+      width: 100%
+
+  .es-field-wrap
+    width: 29%
+
+  .es_submit_button
+    background-color: $l-blue
+    border: 0
+    border-radius: 5px
+    font: 20px 'Titillium Web', sans-serif
+    height: 44.5px
+    margin-top: 30px
+    padding: 0 !important
+    width: 29%
+
+/*     END CUSTOM FORM
+ =======================
+ .
+ ======================
+ .
+ SEARCH RESULT PAGE
+ .
+ ======================
+
+.search
+  &.et_right_sidebar
+    #main-content
+      .container
+        margin: 0
+        max-width: 100%
+        width: 100%
+
+    #left-area
+      padding-right: 2vw
+
+    .flex
+      display: grid
+      grid-template: 10% / auto auto auto
+      padding: 0 2vw
+
+  article
+    padding: 2vw
+
+  .pagination
+    padding: 3vw
+
+    a
+      color: $d-teal
+      font-size: 1.5em
+
+/*   END SEARCH RESULT PAGE
+ ==========================
+ .
+ ===================
+ .
+ PAGE 404.
+ .
+ ===================
+ .
+.error404
+  .et_pb_section_0
+    .et_pb_row_0
+      background: $white
+
+/*     END PAGE 404.
+ =======================
+ .
+ ==================================
+ .
+ EMAIL CONFIRMATION GREEN
+ .
+ ==================================
+
+.es_subscription_message
+  &.success,
+  &.error
+    background-color: $b-yellow
+    border-radius: 5px
+    display: block
+    padding: 2.5vw 5vw 3vw
+
+.x-sc-module
+  &.sc
+    .es_subscription_message
+      &.success,
+      &.error
+        font-size-adjust: .7
+
+/*     END EMAIL CONFIRMATION GREEN
+/*======================================
+
+/*
+ LEFT SIDE PROCESS SECTION
+ =========================
+
+/* #main-header.et-fixed-header {
+ *margin-top: 0;
+ *padding-top: 0; }
+
+/* #main-header.et-fixed-header #logo {
+ *width: 60px !important;
+ *height: 60px; }
+
+/* #main-header.et-fixed-header h1#niraTitle {
+ *  font-size: 1em; }
+ *#main-header.et-fixed-header h1#niraTag {
+ *  font-size: 1em;
+ *  margin-left: 6px; }
+
+/* #main-header.et-fixed-header #et-top-navigation {
+ *margin-top: 33px; }
+
+/* #et-top-navigation {
+ *background-color: #77A8B5;
+ *padding-top: 20px;
+ *margin-top: 20px;
+ *height: 54px; }
+
+/* #et-top-navigation ul, #et_search_icon {
+ *display: none; }
+
+/* #main-footer .container {
+ *width: 100%;
+ *max-width: 1280px; }
+
+/* #main-footer #footer-widgets #media_image-2 {
+ *margin-top: 9%; }
+
+/* #main-footer #footer-widgets .footer-widget:nth-child(1n+2) {
+ *width: 28%;
+ *margin-right: 6%; }
+
+/* #main-footer #footer-widgets .footer-widget.last {
+ *margin-right: 0; }
+
+/* #main-footer #footer-widgets .footer-widget:nth-child(1) {
+ *margin-right: -5%; }
+
+/*
+  ===================
+  
+  ╔═╗╔═╗╔═╗╔╦╗╔═╗╦═╗
+  ╠╣ ║ ║║ ║ ║ ║╣ ╠╦╝
+  ╚  ╚═╝╚═╝ ╩ ╚═╝╩╚═
+  
+  ===================
+
+#footer-widgets
+  align-items: center
+  display: flex
+  flex-wrap: wrap
+  padding-bottom: 10% !important
+
+  .footer-widget
+    margin: 0
+
+.footer-widget
+  &:nth-child(3)
+    .fwidget
+      display: flex !important
+      justify-content: center !important
+
+#main-footer
+  #footer-widgets
+    .footer-widget
+      &:nth-child(4)
+        /* width: 15% */
+        border-left: .5px solid $white
+        padding: 10px 0 0 10px
+
+  .niraFoot
+    h4
+      color: $white
+
+    &.xblue
+      color: $l-yel-teal
+
+      .xblue
+        color: $l-yel-teal
+
+  .xbig
+    color: $white
+    font-size: 1.6em
+
+  #custom_html-3
+    width: 100%
+
+    .custom-html-widget
+      &:nth-child(2) >
+        div
+          &:nth-child(1)
+            width: 87%
+
+@import 'mediaQueries'
