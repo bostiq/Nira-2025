@@ -4,19 +4,19 @@
 // sass-lint:disable no-ids
 // // sass-lint:disable force-element-nesting
 // sass-lint:disable nesting-depth
+  
+@use 'colors.sass' as *
+@use 'sass:color'
 
-/*
- .
- ================
- .
- CONNECTIONS
- .
- ===============
- */
+/* ==============================
+/*                              |
+/*!     -== CONNECTIONS ==-     |
+/* _____________________________|
 
-connection
+
+.connection
   border: 3px solid
-  border-radius: 7em
+  // border-radius: 7em
   color: $m-grey
   color: $m-50-black
   z-index: -1
@@ -47,6 +47,14 @@ inner
 
 .cycle
   transform: rotate(-40deg)
+
+.origin-1
+  visibility: hidden
+  position: absolute
+  left: 0
+  top: 0
+  width: 1px
+  height: 1px
 
 /*   ANCHORS
 
@@ -100,7 +108,7 @@ inner
 @media (max-width: 980px)
   .infoG
     .step1
-      transform: translate(-165%, -50%)
+      transform: translate(-200%, -50%)
 
     .step2
       transform: translate(-20%, -80%)
@@ -112,23 +120,62 @@ inner
       transform: translate(-10%, 80%)
 
     .step5
-      transform: translate(-165%, 50%)
+      transform: translate(-200%,90%)
 
 @media (max-width: 767px)
   .infoG
+
+    .step1,
+    .step2,
+    .step3,
+    .step4,
+    .step5
+      margin: 0 !important
+      margin-bottom: 0
+      margin-top: 0
+      width: 60%
+
     .step1
-      transform: translate(-190%, -50%)
+      transform: translate(-130%, -50%)
 
     .step2
-      transform: translate(-20%, -80%)
+      transform: translate(30%,-80%)
 
     .step3
-      transform: translate(20%, 0%)
+      transform: translate(60%,0%)
 
     .step4
-      transform: translate(-10%, 80%)
+      transform: translate(30%,80%)
 
     .step5
-      transform: translate(-190%, 50%)
-/*   END CONNECTIONS
- ===================
+      transform: translate(-140%,60%)
+
+
+@media screen and (max-width: 480px)
+  
+  .infoG
+    .step1,
+    .step2,
+    .step3,
+    .step4,
+    .step5
+      width: 100%
+
+    .step1
+      transform: translate(-100%,-80%)
+
+    .step2
+      transform: translate(0%, -60%)
+
+    .step3
+      transform: translate(30%,80%)
+      width: 75%
+
+    .step4
+      transform: translate(-2%,111%)
+
+    .step5
+      transform: translate(-100%,140%)
+
+/*!   END CONNECTIONS
+ ====================

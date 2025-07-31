@@ -1,0 +1,38 @@
+/* ===========================
+/* |                         |
+/*!|        COMPONENTS       |
+/* |_________________________|
+
+  
+/*!|        LEARN MORE SECTION       |
+
+.x-learn-more
+  .et_pb_row:nth-child(3)
+    justify-content: center
+
+    .et_pb_column:nth-child(1),
+    .et_pb_column:nth-child(2),
+    .et_pb_column:nth-child(3),
+    .et_pb_column:nth-child(4)
+      width: auto
+      flex-grow: 1
+      flex-basis: 24%
+
+@media screen and (max-width: 980px)
+  .x-learn-more
+    .et_pb_row:nth-child(3)
+      gap: 2%
+
+      .et_pb_column
+        margin-bottom: 30px
+        .et_pb_module
+          margin-bottom: 0
+
+    .et_pb_row_4col
+      & > .et_pb_column.et_pb_column_1_4
+        margin-right: 0
+
+@media screen and (max-width: 480px)
+  .x-learn-more
+    .et_pb_row:nth-child(3)
+      flex-flow: column wrap
