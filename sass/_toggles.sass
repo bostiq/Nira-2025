@@ -1,0 +1,49 @@
+@use 'colors' as *
+@use "sass:color"
+/* __________________________
+/* |                        |
+/*!|  TOGGLES WITH ARROWS   |
+/* |________________________|
+
+.page-id-719
+  .et_pb_toggle_title
+    font-family: 'Titillium Web', Helvetica, Arial, Lucida, sans-serif
+    font-size: 18px
+
+  .et_pb_toggle
+    .et_pb_toggle_title
+      &::after
+        content: '\f0da'
+        font-family: Fontawesome
+        left: -1vw
+        position: absolute
+        top: 0
+
+  .et_pb_section
+    .et_pb_toggle
+      ul
+        li
+          &::before
+            content: '\f105'
+
+@media (max-width: 980px)
+  .page-id-719
+    .et_pb_toggle
+      .et_pb_toggle_title
+        &::after
+          left: -3vw
+
+/* EXEPTION FOR "ITEMS OF ASSESSMENT" PAGE
+
+.et_pb_toggle
+  .et_pb_toggle_title
+    &::before
+      color: $d-teal !important
+      content: '\f067' !important
+      font-family: Fontawesome !important
+
+.home
+  .et_pb_toggle
+    .et_pb_toggle_title
+      &::before
+        color: $white !important

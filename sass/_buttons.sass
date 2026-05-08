@@ -1,0 +1,49 @@
+@use 'colors' as *
+@use "sass:color"
+/*.
+  =============
+ 
+  ╔╗ ╦ ╦╔╦╗╔╦╗╔═╗╔╗╔╔═╗ ┬┬
+  ╠╩╗║ ║ ║  ║ ║ ║║║║╚═╗ ││
+  ╚═╝╚═╝ ╩  ╩ ╚═╝╝╚╝╚═╝ oo
+
+
+/* ______________________
+/* |                    |
+/*!|      BUTTONS       |
+/* |____________________|
+
+body
+  .et_pb_button,
+  & .et_pb_bg_layout_light .et_pb_button,
+  & .et_pb_bg_layout_light.et_pb_button
+    &:hover
+      background-color: $m-teal
+      background: linear-gradient(35deg, $g-yellow, $trans) padding-box, linear-gradient(100deg, $g-pink, $trans) padding-box, linear-gradient(245deg, $g-sky, $trans) border-box !important
+      border-color: color.adjust($white, $alpha: .73) !important
+      border-radius: 0
+
+.et_pb_button
+  &:hover
+    // background-color: $b-azur
+    // background: linear-gradient(transparent, transparent) content-box,linear-gradient($b-azur, $b-azur) padding-box,linear-gradient(135deg, $b-azur, $b-yellow) border-box
+    // border: 3px solid transparent !important
+    // transition: all 500ms ease-in-out !important
+    box-shadow: 0 0 10px 0 $white
+
+// .et_pb_button
+//  border: 3px solid transparent !important
+//  background: linear-gradient(transparent, transparent) content-box, linear-gradient( $btn-up, $btn-down) padding-box, linear-gradient(135deg, $b-azur, $b-yellow) border-box
+//  transition: all 500ms ease-in-out !important
+
+//   &:hover
+//     background: $l-blue
+//     background: linear-gradient(transparent, transparent) content-box, linear-gradient($btn-up, $btn-down) padding-box, linear-gradient(135deg, $b-azur, $b-yellow) border-box
+
+.et_pb_button_module_wrapper
+  .et_pb_button
+    padding: 0 5%
+
+
+/* END BUTTONS!!
+ ================

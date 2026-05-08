@@ -1,22 +1,71 @@
-/* ===========================
-/* |                         |
-/*!|        COMPONENTS       |
-/* |_________________________|
+@use 'colors' as *
+@use "sass:color"
 
-  
-/*!|        LEARN MORE SECTION       |
+/* ____________________________________
+/* |                                  |
+/*!| -==   MOBILE MENU HEADER    ==-> |
+/* |                                  |
+/* |__________________________________|
+
+@media screen and (max-width: 980px)
+  .et_fixed_nav #main-header, #main-header #mobile_menu
+    background-color: color.adjust($white, $alpha: -.1 )
+    position: fixed
+
+/* ╦  ╔═╗╔═╗╔═╗  ╦ ╦┌─┐┌─┐┌┬┐┌─┐┬─┐
+/* ║  ║ ║║ ╦║ ║  ╠═╣├┤ ├─┤ ││├┤ ├┬┘
+/* ╩═╝╚═╝╚═╝╚═╝  ╩ ╩└─┘┴ ┴─┴┘└─┘┴└─
+ .
+  ==================================
+
+#main-header
+  .logo_container
+    a
+      &::after
+        color: $vd-teal
+        content: 'NiRA'
+        font-family: 'Zilla Slab', Georgia, 'Times New Roman', serif
+        font-size: 40px
+        font-weight: 500
+        height: 100px
+        margin-left: 10px
+        position: relative
+        top: 10px
+        width: 250px
+
+  #logo
+    /* width: 180px !important
+     *height: 180px */
+    animation: rotation 120s 0s linear infinite
+    z-index: -999
+
+@keyframes rotation
+  0%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(360deg)
+
+/* END OF LOGO HEADER
+  ====================
+
+/* ============================
+/* |                          |
+/*!|    LEARN MORE SECTION    |
+/* |__________________________|
+
 
 .x-learn-more
   .et_pb_row:nth-child(3)
     justify-content: center
+    gap: 20px
 
     .et_pb_column:nth-child(1),
     .et_pb_column:nth-child(2),
     .et_pb_column:nth-child(3),
     .et_pb_column:nth-child(4)
       width: auto
-      flex-grow: 1
-      flex-basis: 24%
+      flex: 1 1 23.5%
 
 @media screen and (max-width: 980px)
   .x-learn-more
@@ -36,3 +85,22 @@
   .x-learn-more
     .et_pb_row:nth-child(3)
       flex-flow: column wrap
+
+/* END OF LEARN MORE SECTION
+  ==========================
+
+/* _______________________
+/* |                     |
+/*!|    SUBSCRIPTION     |
+/* |_____________________|
+#sub
+  .et_parallax_bg
+    animation: zoom 1s ease-in-out 2s forwards
+    transform: scale(0, 0)
+
+@keyframes zoom
+  100%
+    transform: scale(1, 1)
+
+/* END OF SUBSCRIPTION
+  ====================

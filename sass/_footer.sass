@@ -1,0 +1,65 @@
+@use 'colors' as *
+@use "sass:color"
+/*
+  ===================
+  
+  ╔═╗╔═╗╔═╗╔╦╗╔═╗╦═╗
+  ╠╣ ║ ║║ ║ ║ ║╣ ╠╦╝
+  ╚  ╚═╝╚═╝ ╩ ╚═╝╩╚═
+  
+  ===================
+
+/* ______________________
+/* |                    |
+/*!|       FOOTER       |
+/* |____________________|
+
+#footer-widgets
+  align-items: center
+  justify-content: space-between
+  display: flex
+  flex-wrap: wrap
+  padding-bottom: 10% !important
+
+  .footer-widget
+    margin: 0
+
+  &.clearfix::after
+    display: none
+
+.footer-widget
+  &:nth-child(3)
+    .fwidget
+      display: flex !important
+      justify-content: center !important
+
+#main-footer
+  #footer-widgets
+    .footer-widget
+      &:nth-child(4)
+        /* width: 15% */
+        border-left: .5px solid $white
+        padding: 10px 0 0 10px
+
+  .niraFoot
+    h4
+      color: $white
+
+    &.xblue
+      color: $l-yel-teal
+
+      .xblue
+        color: $l-yel-teal
+
+  .xbig
+    color: $white
+    font-size: 1.6em
+
+  #custom_html-3
+    width: 100%
+
+    .custom-html-widget
+      &:nth-child(2) >
+        div
+          &:nth-child(1)
+            width: 87%
