@@ -708,9 +708,6 @@ inner {
   position: absolute;
   width: 5px;
 }
-.cycleBox {
-  /* border: 1px solid red */
-}
 
 .cycle {
   transform: rotate(-40deg);
