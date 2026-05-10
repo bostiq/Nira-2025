@@ -523,7 +523,7 @@ p a:focus {
 @media screen and (max-width: 980px) {
   .et_fixed_nav #main-header, #main-header #mobile_menu {
     background-color: rgba(255, 255, 255, 0.9);
-    position: fixed;
+    position: fixed !important;
   }
 }
 /* ╦  ╔═╗╔═╗╔═╗  ╦ ╦┌─┐┌─┐┌┬┐┌─┐┬─┐ */
@@ -622,18 +622,18 @@ p a:focus {
 /* |                    | */
 /*!|      BUTTONS       | */
 /* |____________________| */
-body .et_pb_button:hover, body .et_pb_bg_layout_light .et_pb_button:hover, body .et_pb_bg_layout_light.et_pb_button:hover {
+body .et_pb_button:not(.x-plain-btn):hover, body .et_pb_bg_layout_light .et_pb_button:not(.x-plain-btn):hover, body .et_pb_bg_layout_light.et_pb_button:not(.x-plain-btn):hover {
   background-color: #227c7e;
   background: linear-gradient(35deg, #ffc, rgba(255, 255, 255, 0)) padding-box, linear-gradient(100deg, #faf, rgba(255, 255, 255, 0)) padding-box, linear-gradient(245deg, #aff, rgba(255, 255, 255, 0)) border-box !important;
   border-color: white !important;
   border-radius: 0;
 }
 
-.et_pb_button:hover {
+.et_pb_button:not(.x-plain-btn):hover {
   box-shadow: 0 0 10px 0 #fff;
 }
 
-.et_pb_button_module_wrapper .et_pb_button {
+.et_pb_button_module_wrapper .et_pb_button:not(.x-plain-btn) {
   padding: 0 5%;
 }
 

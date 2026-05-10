@@ -14,16 +14,16 @@
 /* |____________________|
 
 body
-  .et_pb_button,
-  & .et_pb_bg_layout_light .et_pb_button,
-  & .et_pb_bg_layout_light.et_pb_button
+  .et_pb_button:not(.x-plain-btn),
+  & .et_pb_bg_layout_light .et_pb_button:not(.x-plain-btn),
+  & .et_pb_bg_layout_light.et_pb_button:not(.x-plain-btn)
     &:hover
       background-color: $m-teal
       background: linear-gradient(35deg, $g-yellow, $trans) padding-box, linear-gradient(100deg, $g-pink, $trans) padding-box, linear-gradient(245deg, $g-sky, $trans) border-box !important
       border-color: color.adjust($white, $alpha: .73) !important
       border-radius: 0
 
-.et_pb_button
+.et_pb_button:not(.x-plain-btn)
   &:hover
     // background-color: $b-azur
     // background: linear-gradient(transparent, transparent) content-box,linear-gradient($b-azur, $b-azur) padding-box,linear-gradient(135deg, $b-azur, $b-yellow) border-box
@@ -41,7 +41,7 @@ body
 //     background: linear-gradient(transparent, transparent) content-box, linear-gradient($btn-up, $btn-down) padding-box, linear-gradient(135deg, $b-azur, $b-yellow) border-box
 
 .et_pb_button_module_wrapper
-  .et_pb_button
+  .et_pb_button:not(.x-plain-btn)
     padding: 0 5%
 
 
