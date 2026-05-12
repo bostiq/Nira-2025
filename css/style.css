@@ -96,47 +96,6 @@ p a:focus {
   position: relative;
 }
 
-/* ________________________________ */
-/* |                              | */
-/*!|  MAIN MENU HOVER ANIMATION   | */
-/* |______________________________| */
-#top-menu > li > ul {
-  overflow: hidden;
-}
-#top-menu > li > ul > li::before {
-  color: #32998f;
-  content: "\f105";
-  font: 1em Fontawesome;
-  left: 13px;
-  position: absolute;
-  top: 13px;
-  transform: translateX(-50px);
-}
-#top-menu > li > ul > li:hover::before {
-  transform: translateX(0);
-  transition: all 500ms ease-in-out 0s;
-}
-
-/*  END - MAIN MENU HOVER ANIMATION
- * ================================== */
-/* _____________________ */
-/* |                   | */
-/*!|      DIVIDER      | */
-/* |___________________| */
-@media screen and (max-width: 767px) {
-  #main-content .section_has_divider.et_pb_top_divider .et_pb_top_inside_divider, #main-content .section_has_divider.et_pb_bottom_divider .et_pb_bottom_inside_divider {
-    background-size: 100% 50px;
-    height: 50px;
-  }
-}
-/* __________________________ */
-/* |                        | */
-/*!|  DEVIDERS CORRECTION   | */
-/* |________________________| */
-.et_pb_top_inside_divider {
-  margin-top: 0;
-}
-
 /* ============================== */
 /* |                            | */
 /*!|      GLOBAL SECTIONS       | */
@@ -522,10 +481,46 @@ p a:focus {
 /* |__________________________________| */
 @media screen and (max-width: 980px) {
   .et_fixed_nav #main-header, #main-header #mobile_menu {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     position: fixed !important;
   }
 }
+/* ________________________________ */
+/* |                              | */
+/*!|  MAIN MENU HOVER ANIMATION   | */
+/* |______________________________| */
+#top-menu > li > ul {
+  overflow: hidden;
+}
+#top-menu > li > ul > li::before {
+  color: #32998f;
+  content: "\f105";
+  font: 1em Fontawesome;
+  left: 13px;
+  position: absolute;
+  top: 13px;
+  transform: translateX(-50px);
+}
+#top-menu > li > ul > li:hover::before {
+  transform: translateX(0);
+  transition: all 500ms ease-in-out 0s;
+}
+
+/*  END - MAIN MENU HOVER ANIMATION
+ * ================================== */
+/* ________________________________ */
+/* |                              | */
+/*!|  MAIN MENU WIDTH ADJUSTMENT  | */
+/* |______________________________| */
+@media screen and (max-width: 767px) {
+  #main-header .container.et_menu_container {
+    width: 90%;
+    margin-left: 10px;
+    margin-right: auto;
+  }
+}
+/*  END - MAIN MENU WIDTH ADJUSTMENT
+ * =================================== */
 /* ╦  ╔═╗╔═╗╔═╗  ╦ ╦┌─┐┌─┐┌┬┐┌─┐┬─┐ */
 /* ║  ║ ║║ ╦║ ║  ╠═╣├┤ ├─┤ ││├┤ ├┬┘ */
 /* ╩═╝╚═╝╚═╝╚═╝  ╩ ╩└─┘┴ ┴─┴┘└─┘┴└─
@@ -558,6 +553,24 @@ p a:focus {
     transform: rotate(360deg);
   }
 }
+/* _____________________ */
+/* |                   | */
+/*!|      DIVIDER      | */
+/* |___________________| */
+@media screen and (max-width: 767px) {
+  #main-content .section_has_divider.et_pb_top_divider .et_pb_top_inside_divider, #main-content .section_has_divider.et_pb_bottom_divider .et_pb_bottom_inside_divider {
+    background-size: 100% 50px;
+    height: 50px;
+  }
+}
+/* __________________________ */
+/* |                        | */
+/*!|  DEVIDERS CORRECTION   | */
+/* |________________________| */
+.et_pb_top_inside_divider {
+  margin-top: 0;
+}
+
 /* END OF LOGO HEADER
  * ==================== */
 /* ============================ */
