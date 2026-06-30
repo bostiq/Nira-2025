@@ -159,7 +159,7 @@ p a:focus {
 /* |_____________________| */
 .x-rainbow {
   background-color: #fff;
-  background: linear-gradient(0deg, #fff 10%, rgba(255, 255, 255, 0) 30%) padding-box, linear-gradient(35deg, #ffc, rgba(255, 255, 255, 0)) padding-box, linear-gradient(100deg, #faf, rgba(255, 255, 255, 0)) padding-box, linear-gradient(245deg, #aff, rgba(255, 255, 255, 0)) padding-box !important;
+  background: linear-gradient(0deg, #fff 10%, rgba(255, 255, 255, 0) 30%) padding-box, linear-gradient(35deg, #ffffcc, rgba(255, 255, 255, 0)) padding-box, linear-gradient(100deg, #ffaaff, rgba(255, 255, 255, 0)) padding-box, linear-gradient(245deg, #aaffff, rgba(255, 255, 255, 0)) padding-box !important;
   border-color: white !important;
   border-radius: 0;
 }
@@ -296,8 +296,8 @@ p a:focus {
 /* |                                | */
 /*!|    ITEMS OF ASSESSMENT PAGE    | */
 /* |________________________________| */
-.page-id-719 .et_pb_section_2.et_pb_section {
-  background: linear-gradient(35deg, #ffc, rgba(255, 255, 255, 0)) content-box, linear-gradient(100deg, #faf, rgba(255, 255, 255, 0)) padding-box, linear-gradient(145deg, #aff, rgba(255, 255, 255, 0)) border-box !important;
+.page-id-719 .et_pb_section.x-items {
+  background: linear-gradient(35deg, #ffffcc, rgba(255, 255, 255, 0)) content-box, linear-gradient(100deg, #ffaaff, rgba(255, 255, 255, 0)) padding-box, linear-gradient(145deg, #aaffff, rgba(255, 255, 255, 0)) border-box !important;
   padding: 0;
 }
 
@@ -637,7 +637,7 @@ p a:focus {
 /* |____________________| */
 body .et_pb_button:not(.x-plain-btn):hover, body .et_pb_bg_layout_light .et_pb_button:not(.x-plain-btn):hover, body .et_pb_bg_layout_light.et_pb_button:not(.x-plain-btn):hover {
   background-color: #227c7e;
-  background: linear-gradient(35deg, #ffc, rgba(255, 255, 255, 0)) padding-box, linear-gradient(100deg, #faf, rgba(255, 255, 255, 0)) padding-box, linear-gradient(245deg, #aff, rgba(255, 255, 255, 0)) border-box !important;
+  background: linear-gradient(35deg, #ffffcc, rgba(255, 255, 255, 0)) padding-box, linear-gradient(100deg, #ffaaff, rgba(255, 255, 255, 0)) padding-box, linear-gradient(245deg, #aaffff, rgba(255, 255, 255, 0)) border-box !important;
   border-color: white !important;
   border-radius: 0;
 }
